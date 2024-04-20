@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/rgHistory1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/line1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First City"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <RadioButton
+            android:id="@+id/rbFirstCity1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Helsinki" />
+
+        <RadioButton
+            android:id="@+id/rbSecondCity1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oulu" />
+
+        <RadioButton
+            android:id="@+id/rbThirdCity1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lappeenranta" />
+
+        <RadioButton
+            android:id="@+id/rbForthCity1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rovaniemi" />
+
+        <RadioButton
+            android:id="@+id/rbFifthCity1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lahti" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="1px"
+        android:layout_height="0dp"
+        android:background="#88000000"
+        app:layout_constraintBottom_toBottomOf="@+id/rgHistory1"
+        app:layout_constraintEnd_toStartOf="@+id/rgHistory2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rgHistory1"
+        app:layout_constraintTop_toTopOf="@id/rgHistory1" />
+
+
+    <RadioGroup
+        android:id="@+id/rgHistory2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/rgHistory1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/line1"
+        app:layout_constraintTop_toTopOf="@id/rgHistory1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second City"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <RadioButton
+            android:id="@+id/rbFirstCity2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Helsinki" />
+
+        <RadioButton
+            android:id="@+id/rbSecondCity2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oulu" />
+
+        <RadioButton
+            android:id="@+id/rbThirdCity2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lappeenranta" />
+
+        <RadioButton
+            android:id="@+id/rbForthCity2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rovaniemi" />
+
+        <RadioButton
+            android:id="@+id/rbFifthCity2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lahti" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#88000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgHistory1" />
+
+    <Button
+        android:id="@+id/compareBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="compare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgHistory1" />
+
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#88000000"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/compareBtn" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compare Record"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/recordTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#99000000"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+        />
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
